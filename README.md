@@ -52,14 +52,14 @@ CAMPUS_VISITOR/
 
 ## ⚙️ Technologies utilisées
 
-### 🔹 Backend
+## 🔹 Backend
 - Node.js
 - Express.js
 - PostgreSQL
 - JWT (authentification)
 - bcrypt
 
-### 🔹 Frontend
+##  🔹 Frontend
 - React.js
 - Axios
 
@@ -71,20 +71,20 @@ CAMPUS_VISITOR/
 
 ## 👥 Rôles
 
-### 👨‍💼 Administrateur
+##  👨‍💼 Administrateur
 - Gérer visiteurs et hôtes
 - Valider / refuser les visites
 - Consulter le dashboard et les logs
 
-### 🛡️ Agent
+##  🛡️ Agent
 - Effectuer le check-in
 - Consulter les visites
 
-### 🧑‍🏫 Hôte
+##  🧑‍🏫 Hôte
 - Valider / refuser les demandes
 - Effectuer le check-out
 
-### 👤 Visiteur
+##  👤 Visiteur
 - Demander une visite
 - Suivre l’état de la demande
 
@@ -118,12 +118,6 @@ CAMPUS_VISITOR/
 
 ---
 
-## 🛠️ Installation
-
-### 1. Cloner le projet
-
-bash
-git clone https://github.com/nouhaylasabiq21-commits/CAMPUS_VISITOR.git
 cd CAMPUS_VISITOR
 
 2. Backend
