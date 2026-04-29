@@ -26,6 +26,7 @@ https://github.com/user-attachments/assets/aaf19958-0df2-48cf-b6f9-ccba5400bdcc
 
 📸 Demo mobile
 
+https://github.com/user-attachments/assets/915ce582-cf47-46a8-afcd-0137b54eb2fb
 
 📸 Captures
 ## Web 
