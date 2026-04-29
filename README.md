@@ -47,7 +47,17 @@ CAMPUS_VISITOR/
 <img width="960" height="481" alt="visitors" src="https://github.com/user-attachments/assets/8a20e192-877f-431a-ac0a-424821e86f9a" />
 ## Hosts 
 <img width="960" height="482" alt="hosts" src="https://github.com/user-attachments/assets/678721fe-8268-4181-9d51-e8a4a942f8e8" />
-
+## Mobile 
+## Splash 
+<img width="176" height="387" alt="splash" src="https://github.com/user-attachments/assets/8cc309aa-3098-41ce-8b63-ec96193eece1" />
+## Login
+<img width="176" height="380" alt="mobile_login" src="https://github.com/user-attachments/assets/22689de9-ea12-426f-981b-843ef44d7911" />
+## Host 
+<img width="178" height="383" alt="host" src="https://github.com/user-attachments/assets/1cceea8f-938d-4ff7-8342-526cdb0d0b6c" />
+ ## Visitor
+<img width="176" height="380" alt="visitor" src="https://github.com/user-attachments/assets/f28dffd7-6e43-4614-9264-6f53259d66f4" />
+## Agent 
+<img width="176" height="381" alt="agent" src="https://github.com/user-attachments/assets/fcc72957-98e3-429c-8f3c-d3aff6aa741b" />
 
 
 ## ⚙️ Technologies utilisées
