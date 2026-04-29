@@ -14,16 +14,7 @@ Le système remplace les méthodes traditionnelles par une solution numérique o
 - ✔ Gestion centralisée
 
 ---
-
-## 🏗️ Structure du projet
-CAMPUS_VISITOR/
-├── campus-visitor-api # Backend (Node.js / Express)
-├── campus-visitor-frontend # Frontend (React.js)
-├── CampusVisitor-android # Mobile (Android)
-├── figures # Images et captures
-└── README.md
-
-## Architecture De Project 
+## 🏗️ Architecture De Project 
 <img width="848" height="742" alt="architecture" src="https://github.com/user-attachments/assets/72f1ea01-8346-45d9-b8cf-9d91a40b17a0" />
 ## Architecture du DataBase
 <img width="428" height="693" alt="database" src="https://github.com/user-attachments/assets/921abdd7-a2ba-4bf4-961a-a2ec34445c2c" />
