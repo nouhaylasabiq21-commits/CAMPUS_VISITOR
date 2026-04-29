@@ -23,9 +23,9 @@ CAMPUS_VISITOR/
 ├── figures # Images et captures
 └── README.md
 
-### Architecture De Project 
+## Architecture De Project 
 <img width="848" height="742" alt="architecture" src="https://github.com/user-attachments/assets/72f1ea01-8346-45d9-b8cf-9d91a40b17a0" />
-### Architecture du DataBase
+## Architecture du DataBase
 <img width="428" height="693" alt="database" src="https://github.com/user-attachments/assets/921abdd7-a2ba-4bf4-961a-a2ec34445c2c" />
 
 ---
@@ -36,7 +36,7 @@ CAMPUS_VISITOR/
 
 
 📸 Captures
-### Web 
+## Web 
 ## Login
 <img width="960" height="484" alt="login" src="https://github.com/user-attachments/assets/f86888cd-d290-499a-82ce-5f5fe8d23fc0" />
 ## Dashboard
