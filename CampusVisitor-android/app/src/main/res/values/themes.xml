@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CampusVisitor" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#1A1F14</item>
+        <item name="colorPrimaryVariant">#2A2F24</item>
+        <item name="colorOnPrimary">#F0EDE6</item>
+        <item name="colorSecondary">#C4A050</item>
+        <item name="colorOnSecondary">#1A1F14</item>
+        <item name="android:windowBackground">@color/bg</item>
+    </style>
+</resources>

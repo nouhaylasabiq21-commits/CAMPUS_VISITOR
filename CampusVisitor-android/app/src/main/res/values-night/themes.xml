@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CampusVisitor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/accent2</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorSecondary">@color/accent2</item>
+        <item name="colorOnSecondary">@color/bg</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg2</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_muted</item>
+
+        <!-- TextInputLayout style -->
+        <item name="textInputStyle">@style/Widget.ENS.TextInputLayout</item>
+
+        <!-- Button style -->
+        <item name="materialButtonStyle">@style/Widget.ENS.Button</item>
+    </style>
+
+    <!-- TextInputLayout -->
+    <style name="Widget.ENS.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/surface</item>
+        <item name="boxStrokeColor">@color/border_light</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="hintTextColor">@color/text_subtle</item>
+        <item name="android:textColorHint">@color/text_subtle</item>
+    </style>
+
+    <!-- Button -->
+    <style name="Widget.ENS.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/accent</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Card style -->
+    <style name="Widget.ENS.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="cardCornerRadius">14dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/border</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Outline button -->
+    <style name="Widget.ENS.Button.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/border_light</item>
+        <item name="android:textColor">@color/text_muted</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <!-- Text button -->
+    <style name="Widget.ENS.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/accent2</item>
+    </style>
+</resources>

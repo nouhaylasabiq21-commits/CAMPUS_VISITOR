@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment android:id="@+id/dashboardFragment"
+        android:name="com.ens.campusvisitor.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"/>
+    <fragment android:id="@+id/visitsFragment"
+        android:name="com.ens.campusvisitor.ui.visits.VisitsFragment"
+        android:label="Visites"/>
+    <fragment android:id="@+id/visitorsFragment"
+        android:name="com.ens.campusvisitor.ui.visitors.VisitorsFragment"
+        android:label="Visiteurs"/>
+    <fragment android:id="@+id/hostsFragment"
+        android:name="com.ens.campusvisitor.ui.hosts.HostsFragment"
+        android:label="Hôtes"/>
+    <fragment android:id="@+id/checkInFragment"
+        android:name="com.ens.campusvisitor.ui.checkin.CheckInFragment"
+        android:label="Check-in"/>
+    <fragment android:id="@+id/logsFragment"
+        android:name="com.ens.campusvisitor.ui.logs.LogsFragment"
+        android:label="Journal"/>
+</navigation>

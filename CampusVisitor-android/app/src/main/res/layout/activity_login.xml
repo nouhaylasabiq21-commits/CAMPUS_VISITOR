@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginBottom="26dp"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/logo"
+                    android:scaleType="fitCenter"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="École Normale Supérieure"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Marrakech — Gestion des visiteurs"
+                    android:textColor="#2C2C2C"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connexion"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accédez à votre espace"
+            android:textColor="@color/text_muted"
+            android:textSize="14sp"
+            android:layout_marginBottom="18dp" />
+
+        <!-- Roles -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="26dp">
+
+            <Button
+                android:id="@+id/btnAgent"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:text="Agent"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/surface"
+                app:cornerRadius="23dp"
+                app:strokeColor="@color/border_light" />
+
+            <Button
+                android:id="@+id/btnHost"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="6dp"
+                android:text="Hôte"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/surface"
+                app:cornerRadius="23dp"
+                app:strokeColor="@color/border_light" />
+
+            <Button
+                android:id="@+id/btnVisitor"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:text="Visiteur"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/surface"
+                app:cornerRadius="23dp"
+                app:strokeColor="@color/border_light" />
+
+        </LinearLayout>
+
+        <!-- Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginBottom="14dp"
+            app:boxBackgroundColor="@color/surface"
+            app:boxStrokeColor="@color/border_light"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:hintTextColor="@color/text_muted">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_subtle" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mot de passe"
+            android:layout_marginBottom="12dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/text_muted"
+            app:boxBackgroundColor="@color/surface"
+            app:boxStrokeColor="@color/border_light"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:hintTextColor="@color/text_muted">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:inputType="textPassword"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_subtle" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Error -->
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/accent_red"
+            android:textSize="13sp"
+            android:background="@drawable/error_bg"
+            android:padding="10dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone" />
+
+        <!-- Login -->
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Se connecter"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/accent"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="12dp"
+            app:cornerRadius="18dp" />
+    </LinearLayout>
+</ScrollView>

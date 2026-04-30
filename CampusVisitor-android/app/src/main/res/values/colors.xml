@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- ========================= -->
+    <!-- NOUVEAU DESIGN SYSTEM -->
+    <!-- ========================= -->
+
+    <!-- Background -->
+    <color name="bg">#F4F1EC</color>
+    <color name="bg2">#EDE7DF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface2">#E7E1D8</color>
+    <color name="dark_bg">#F4F1EC</color>
+
+    <!-- Text -->
+    <color name="text_primary">#1F1F1F</color>
+    <color name="text_secondary">#44403C</color>
+    <color name="text_muted">#6F6B65</color>
+    <color name="text_subtle">#9C978F</color>
+
+    <!-- Accent (VERT ENS) -->
+    <color name="accent">#2E5E4E</color>
+    <color name="accent2">#4A7C6A</color>
+    <color name="accent_bg">#DCE8E3</color>
+
+    <!-- Green -->
+    <color name="green">#2E5E4E</color>
+    <color name="green_bg">#DCE8E3</color>
+
+    <!-- Neutral (ancien blue) -->
+    <color name="blue">#6F6B65</color>
+    <color name="blue_bg">#E7E1D8</color>
+
+    <!-- Gold -->
+    <color name="gold">#C2A878</color>
+    <color name="gold_bg">#EFE6D4</color>
+
+    <!-- Borders -->
+    <color name="border">#D6CEC4</color>
+    <color name="border_light">#E3DBD1</color>
+
+    <!-- Error -->
+    <color name="accent_red">#B94A48</color>
+
+
+
+    <!-- ========================= -->
+    <!-- COMPATIBILITÉ SPLASH (cv_*) -->
+    <!-- ========================= -->
+
+    <!-- Mapping vers nouveau système -->
+    <color name="accent_red_bg">#F5DADA</color>
+    <color name="cv_primary">#2E5E4E</color>        <!-- accent -->
+    <color name="cv_primary_dark">#1F1F1F</color>   <!-- text_primary -->
+
+    <color name="cv_accent">#C2A878</color>         <!-- gold -->
+
+    <color name="cv_text_primary">#1F1F1F</color>   <!-- text_primary -->
+    <color name="cv_text_muted">#6F6B65</color>     <!-- text_muted -->
+
+    <color name="cv_background">#F4F1EC</color>     <!-- bg -->
+    <color name="cv_surface">#FFFFFF</color>        <!-- surface -->
+
+</resources>

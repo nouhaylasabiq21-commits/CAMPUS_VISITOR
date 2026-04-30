@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/strings.xml — textes splash -->
+<resources>
+    <string name="new_visit">Nouvelle visite</string>
+    <string name="visitor_required">VISITEUR *</string>
+    <string name="new_visitor">+ Nouveau visiteur</string>
+    <string name="host_required">HÔTE À VISITER *</string>
+    <string name="date_time_required">DATE ET HEURE *</string>
+    <string name="choose_date_time">Choisir date et heure</string>
+    <string name="purpose_required">OBJET *</string>
+    <string name="visit_purpose">Objet de la visite</string>
+    <string name="notes_label">NOTES</string>
+    <string name="notes_optional">Notes optionnelles</string>
+    <string name="cancel">Annuler</string>
+    <string name="create">Créer</string>
+    <string name="app_name">CampusVisitor</string>
+    <string name="cv_app_name">CampusVisitor</string>
+    <string name="cv_header_label">ENS · EST. 1794</string>
+    <string name="cv_institution">École Normale Supérieure</string>
+    <string name="cv_tagline">Gestion officielle des visiteurs</string>
+    <string name="cv_footer">Sécurisé · v2.4</string>
+</resources>

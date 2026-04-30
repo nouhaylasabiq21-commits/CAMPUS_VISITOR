@@ -1,0 +1,420 @@
+.login-root {
+  min-height: 100vh;
+  display: flex;
+  background: #0f1b2e;
+}
+
+
+  /* PANNEAU GAUCHE — Style institutionnel*/
+  
+.login-left {
+  flex: 1;
+  background: linear-gradient(160deg, #D3F3DA 0%, #D3F3DA 40%, #D3F3DA 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 48px 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Motif zellige subtil en background */
+.deco-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0L50 30L80 40L50 50L40 80L30 50L0 40L30 30Z' fill='none' stroke='%23c9a227' stroke-width='0.4' opacity='0.1'/%3E%3C/svg%3E");
+  background-size: 100px 100px;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Cadre double doré ── */
+.frame-outer {
+  position: absolute;
+  inset: 28px;
+  border: 1.5px solid #073310;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.frame-inner {
+  position: absolute;
+  inset: 36px;
+  border: 1px solid #073310;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Coins décoratifs ── */
+.corner {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.corner-tl { top: 24px; left: 24px; border-top: 2px solid #073310; border-left: 2px solid #073310; }
+.corner-tr { top: 24px; right: 24px; border-top: 2px solid #073310; border-right: 2px solid #073310; }
+.corner-bl { bottom: 24px; left: 24px; border-bottom: 2px solid #073310; border-left: 2px solid #073310; }
+.corner-br { bottom: 24px; right: 24px; border-bottom: 2px solid #073310; border-right: 2px solid #073310; }
+
+/* ── Contenu du panneau gauche ── */
+.login-left-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Logo UCA en haut */
+.login-logo-top {
+  margin-top: 150px;
+  margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.logo-icon-wrap {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uca-logo-img {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(201,162,39,0.2));
+}
+
+/* Fallback si l'image ne charge pas */
+.logo-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #073310;
+  opacity: 0.8;
+}
+
+/* Quand l'image charge, on cache le fallback */
+.uca-logo-img:not([src=""]) ~ .logo-fallback,
+.uca-logo-img[src]:not([src=""]) ~ .logo-fallback {
+  display: none;
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo-city {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #073310;
+  text-transform: uppercase;
+}
+
+.logo-arabic {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(7, 51, 16, 0.85);
+  letter-spacing: 0.02em;
+  direction: rtl;
+}
+
+.logo-uni {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: rgba(7, 51, 16, 0.5);
+  text-transform: uppercase;
+}
+
+/* ── Texte principal centré verticalement ── */
+.login-center-text {
+  margin-top: 200px;
+  margin-bottom: 30px;
+  text-align: left;
+  padding-left: 8px;
+}
+
+.login-center-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 70px;
+  font-weight: 700;
+  color: #073310;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 20px rgba(140, 191, 151, 0.2);
+}
+
+/* Ligne dorée sous le titre */
+.title-line {
+  width: 180px;
+  height: 2px;
+  background: linear-gradient(90deg, #073310, rgba(7, 51, 16, 0.3));
+  margin-bottom: 20px;
+  border-radius: 1px;
+}
+
+.subtitle-uni {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #073310;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.subtitle-sys {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #073310;
+  line-height: 1.6;
+}
+
+/* Anneaux décoratifs subtils */
+.deco-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #073310;
+  pointer-events: none;
+  z-index: 0;
+}
+.r1 { width: 500px; height: 500px; bottom: -200px; right: -200px; }
+.r2 { width: 320px; height: 320px; bottom: -80px; right: -80px; border-color: rgba(201,162,39,0.06); }
+.r3 { width: 180px; height: 180px; bottom: 20px; right: 20px; border-color: rgba(201,162,39,0.1); }
+
+
+/* ════════════════════════════════════════
+   PANNEAU DROIT — Formulaire
+   ════════════════════════════════════════ */
+.login-right {
+  width: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 52px;
+  background: #073310;
+  border-left: 1px solid #8CBF97;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  color: #D3F3DA;
+  letter-spacing: -0.01em;
+}
+
+.login-hint {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #D3F3DA;
+  margin-bottom: 10px;
+}
+
+/* ── Combobox profil d'accès ── */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.user-type-select {
+  width: 100%;
+  height: 48px;
+  padding: 0 40px 0 16px;
+  background: #8CBF97;
+  border: 1.5px solid #8CBF97;
+  border-radius: var(--radius, 10px);
+  font-size: 14px;
+  font-weight: 500;
+  color: #073310;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.user-type-select:hover:not(:focus) {
+  background: #D3F3DA;
+  border-color: #D3F3DA;
+  color: #073310;
+}
+
+.user-type-select:focus {
+  border-color: #D3F3DA;
+  background: #D3F3DA;
+  color: #073310;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-type-select:disabled {
+  background: #8CBF97;
+  border-color: #8CBF97;
+  color: #073310;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.user-type-select option {
+  background: #D3F3DA;
+  color: #073310;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #073310;
+  font-size: 10px;
+  pointer-events: none;
+  transition: transform 0.2s;
+}
+
+.select-wrapper:focus-within .select-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #788381;
+  font-style: italic;
+}
+
+/* ── Champs formulaire ── */
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #D3F3DA;
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.field input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  background: #8CBF97;
+  border: 1.5px solid #073310;
+  border-radius: var(--radius, 10px);
+  font-size: 15px;
+  color: #073310;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.field input::placeholder { color: #073310; }
+
+.field input:focus {
+  border-color: #D3F3DA;
+  background: #D3F3DA;
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.08);
+}
+
+.login-error {
+  background: rgba(224, 122, 122, 0.08);
+  border: 1px solid #7a2c2c;
+  color: #f52a2a;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: var(--radius, 10px);
+  margin-bottom: 16px;
+}
+
+.login-btn {
+  width: 100%;
+  height: 50px;
+  background: #1D592A;
+  color: #D3F3DA;
+  border: 0.2px solid #D3F3DA;
+  border-radius: var(--radius, 10px);
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: opacity 0.2s, transform 0.1s, box-shadow 0.2s;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 20px rgba(74, 140, 89, 0.3);
+}
+
+.login-btn:hover { opacity: 0.92; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(74, 140, 89, 0.5); }
+.login-btn:active { transform: translateY(0); }
+.login-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.forgot-link {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: #788381;
+}
+
+.forgot-link a {
+  color: #D3F3DA;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+.forgot-link a:hover { color: #D3F3DA; opacity: 1; text-shadow: 0 6px 24px rgba(211, 243, 218, 0.6); }
+
+
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .login-right { width: 420px; padding: 40px 36px; }
+}
+
+@media (max-width: 768px) {
+  .login-left { display: none; }
+  .login-right { width: 100%; background: #0f1b2e; padding: 32px 24px; }
+  .login-card h2 { font-size: 28px; }
+}
+
+@media (max-width: 480px) {
+  .login-right { padding: 24px 16px; }
+  .login-card h2 { font-size: 24px; }
+  .login-btn { font-size: 13px; }
+}

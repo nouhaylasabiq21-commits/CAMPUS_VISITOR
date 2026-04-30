@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Palette institutionnelle */
+  --bg: #0f1b2e;
+  --surface: #1a2744;
+  --surface2: #223050;
+  --border: rgba(140, 191, 151, 0.15);
+  --border-strong: rgba(140, 191, 151, 0.35);
+  --text: #D3F3DA;
+  --muted: #8CBF97;
+  --subtle: #788381;
+  --accent: #073310;
+  --accent2: #D3F3DA;
+  --green: #8CBF97;
+  --green-bg: rgba(140, 191, 151, 0.1);
+  --blue: #7aa7e0;
+  --blue-bg: rgba(122,167,224,0.1);
+  --gold: #c9a227;
+  --gold-bg: rgba(201,162,39,0.15);
+  --red: #e07a7a;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.5);
+  --shadow-md: 0 8px 40px rgba(0,0,0,0.6);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--surface3); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--subtle); }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }

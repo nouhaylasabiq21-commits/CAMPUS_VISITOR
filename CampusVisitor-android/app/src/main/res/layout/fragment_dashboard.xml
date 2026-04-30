@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvGreeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tableau de bord"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_subtle"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Déconnexion"
+                    android:textColor="@color/accent"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:background="@drawable/btn_logout_bg"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginBottom="28dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/blue_bg"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvPresent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="36sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue"/>
+
+                        <TextView
+                            android:id="@+id/tvPresentLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Présents"
+                            android:textSize="11sp"
+                            android:textColor="@color/blue"
+                            android:alpha="0.7"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/green_bg"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvToday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="36sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/green"/>
+
+                        <TextView
+                            android:id="@+id/tvTodayLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aujourd'hui"
+                            android:textSize="11sp"
+                            android:textColor="@color/green"
+                            android:alpha="0.7"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/gold_bg"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvPending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="36sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gold"/>
+
+                        <TextView
+                            android:id="@+id/tvPendingLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="En attente"
+                            android:textSize="11sp"
+                            android:textColor="@color/gold"
+                            android:alpha="0.7"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/surface2"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvRefused"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="36sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_muted"/>
+
+                        <TextView
+                            android:id="@+id/tvRefusedLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Refusées/Annulées"
+                            android:textSize="11sp"
+                            android:textColor="@color/text_muted"
+                            android:alpha="0.7"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/tvRecentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visites récentes"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="14dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecentVisits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

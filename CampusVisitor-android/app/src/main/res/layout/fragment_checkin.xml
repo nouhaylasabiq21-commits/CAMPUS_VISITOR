@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Check-in / Check-out"
+            android:textSize="20sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+        <Button android:id="@+id/btnRefresh"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="↻" android:textSize="18sp"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="10dp"
+                android:gravity="center_vertical">
+                <View android:layout_width="8dp" android:layout_height="8dp"
+                    android:background="@color/blue" android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Prêts à entrer"
+                    android:textSize="16sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                <TextView android:id="@+id/tvApprovedCount"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:paddingHorizontal="10dp" android:paddingVertical="3dp"
+                    android:background="@color/surface2" android:textSize="12sp"
+                    android:textColor="@color/text_muted"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvApproved"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" android:layout_marginBottom="24dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="10dp"
+                android:gravity="center_vertical">
+                <View android:layout_width="8dp" android:layout_height="8dp"
+                    android:background="@color/green" android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Sur le campus"
+                    android:textSize="16sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                <TextView android:id="@+id/tvOngoingCount"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:paddingHorizontal="10dp" android:paddingVertical="3dp"
+                    android:background="@color/surface2" android:textSize="12sp"
+                    android:textColor="@color/text_muted"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOngoing"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

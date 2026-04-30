@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_splash.xml — CampusVisitor
+    Splash screen modernisé pour l'application ENS.
+
+    Ressources requises (à placer dans res/) :
+      drawable/splash_bg.xml             (dégradé crème vers blanc)
+      drawable/logo_circle_bg.xml        (cercle blanc avec ombre douce)
+      drawable/logo_ring.xml             (anneau doré décoratif)
+      drawable/divider_gold.xml          (filet doré)
+      drawable/divider_green.xml         (filet vert)
+      drawable/footer_dot.xml            (pastille loader)
+      drawable/logo.png                  (votre logo existant)
+      values/colors.xml                  (palette ci-dessous)
+      values/strings.xml                 (textes ci-dessous)
+      font/fraunces.xml ou serif système (titre)
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    android:fitsSystemWindows="true">
+
+    <!-- ============================================================ -->
+    <!-- HEADER : libellé institutionnel discret                      -->
+    <!-- ============================================================ -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="64dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="1dp"
+            android:background="@color/cv_primary"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cv_header_label"
+            android:textColor="@color/cv_primary"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.22"
+            android:fontFamily="monospace"
+            android:textAllCaps="true" />
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="1dp"
+            android:background="@color/cv_primary"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <!-- ============================================================ -->
+    <!-- LOGO : cercle blanc + anneau doré décoratif                  -->
+    <!-- ============================================================ -->
+    <FrameLayout
+        android:id="@+id/logo_wrapper"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <!-- Anneau doré extérieur -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/logo_ring" />
+
+        <!-- Cercle blanc intérieur avec logo -->
+        <FrameLayout
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:background="@drawable/logo_circle_bg"
+            android:padding="22dp"
+            android:elevation="6dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/cv_app_name" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- ============================================================ -->
+    <!-- TITRE : wordmark serif moderne                               -->
+    <!-- ============================================================ -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cv_app_name"
+        android:textColor="@color/cv_text_primary"
+        android:textSize="44sp"
+        android:fontFamily="serif"
+        android:letterSpacing="-0.02"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/logo_wrapper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Filet vert sous le titre -->
+    <View
+        android:id="@+id/divider_primary"
+        android:layout_width="56dp"
+        android:layout_height="2dp"
+        android:background="@color/cv_primary"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ============================================================ -->
+    <!-- SOUS-TITRE : ENS                                             -->
+    <!-- ============================================================ -->
+    <TextView
+        android:id="@+id/subtitle_ens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cv_institution"
+        android:textColor="@color/cv_primary"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.18"
+        android:textAllCaps="true"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toBottomOf="@id/divider_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Filet doré -->
+    <View
+        android:id="@+id/divider_accent"
+        android:layout_width="32dp"
+        android:layout_height="1dp"
+        android:background="@color/cv_accent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/subtitle_ens"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Tagline italique -->
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cv_tagline"
+        android:textColor="@color/cv_text_muted"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/divider_accent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ============================================================ -->
+    <!-- FOOTER : loader 3 points + version                           -->
+    <!-- ============================================================ -->
+    <LinearLayout
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/footer_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/footer_dot"
+            android:layout_marginHorizontal="3dp" />
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/footer_dot"
+            android:layout_marginHorizontal="3dp" />
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/footer_dot"
+            android:layout_marginHorizontal="3dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/footer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cv_footer"
+        android:textColor="@color/cv_text_muted"
+        android:textSize="10sp"
+        android:letterSpacing="0.2"
+        android:textAllCaps="true"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
